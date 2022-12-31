@@ -136,6 +136,7 @@ nav button {
 .nav__items ul li {
   left: -5rem;
 }
+/*#################################### GENERAL  ####################################*/
 
 .post {
   margin-top: 10rem;
@@ -153,20 +154,22 @@ nav button {
 .post-head{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 }
 
 .post__title {
-  display: inline-flex;
-  justify-content: space-evenly;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
   width: auto;
   font-weight: 400;
-  font-size: 75px;
+  font-size: 4.688rem;
   line-height: 96.82px;
 }
 
 .post__body {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: var(--color-white);
   font-weight: 300;
   font-size: 16px;
@@ -174,16 +177,17 @@ nav button {
   margin-top: 1.6rem;
 }
 
+/*#################################### PART A  ####################################*/
+
+.child1 {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
 .logo{
   color: var(--color-white);
   margin-top: 2rem;
-}
-
-.solana ul {
-  position: relative;
-  font-family: 'Quantico', sans-serif;
-  display: flex;
-  color: var(--color-white);
 }
 
 .discover-more {
@@ -212,7 +216,6 @@ background: linear-gradient(90deg, rgba(0,255,187,1) 16%, rgba(0,241,255,1) 37%,
   margin-left: 2rem;
 }
 
-
 .c-image-1{
   display: inline-flex;
   justify-content: center;
@@ -224,40 +227,7 @@ background: linear-gradient(90deg, rgba(0,255,187,1) 16%, rgba(0,241,255,1) 37%,
 }
 
 
-
-
-.child1 {
-  display: flex;
-  flex-direction: row;
-  gap: 4rem;
-}
-
-.footer__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 5rem;
-  width: auto;
-  background: rgb(10,10,10);
-  background: linear-gradient(165deg, rgba(10,10,10,1) 46%, rgba(0,14,255,1) 100%);
-}
-
-.footer__container h4 {
-  font-weight: 600;
-  font-size: 60px;
-  line-height: 96px;
-}
-
-.footer__container ul {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28.8px;
-  justify-content: center;
-  grid-auto-flow: column;
-}
-
-
-
+/*#################################### PART B  ####################################*/
 
 .wrapper {
   max-width: 100%;
@@ -304,18 +274,17 @@ background: linear-gradient(90deg, rgba(0,255,187,1) 16%, rgba(0,241,255,1) 37%,
   letter-spacing: 0em;
 }
 
+/*#################################### PART C  ####################################*/
+
 .c-image img {
-  width: 28rem;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  width: 32rem;
   height: 28rem;
   filter: brightness(30%);
   filter: contrast(120%);
-  filter: drop-shadow(0px 0px 85px blue);
-}
-
-.post-3 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-flow: column;
+  filter: drop-shadow(0px 0px 120px purple);
 }
 
 .c-image-4_1 {
@@ -364,6 +333,62 @@ background: linear-gradient(90deg, rgba(0,255,187,1) 16%, rgba(0,241,255,1) 37%,
   margin-top: 2rem;
   margin-left: 4rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 5rem;
+  padding-bottom: 2rem;
+  width: auto;
+  background: rgb(10,10,10);
+  background: linear-gradient(165deg, rgba(10,10,10,1) 46%, rgba(0,14,255,1) 100%);
+}
+
+.footer__container h4 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 96px;
+}
+
+.footer__container ul {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28.8px;
+  justify-content: center;
+  grid-auto-flow: column;
+}
+
+
+
+
+
+
+
+
+.post-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+}
+
 
 .post-info-4 > .post__title, .post__body-4{
   margin-left: 2rem;
@@ -470,5 +495,32 @@ background: linear-gradient(90deg, rgba(0,255,187,1) 16%, rgba(0,241,255,1) 37%,
   }
 }
 
+@media screen and (max-width: 427px){
+  .c-image-1 img{
+    display: none;
+  }
+
+  .post__info{
+    margin-left: 0;
+    width: max-content;
+    margin: -10vw;
+  }
+
+  .post__body, .post__title{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-right: 2rem;
+    overflow-y: hidden;
+  }
+
+  .discover-more{
+    width: 20rem;
+  }
+
+  .logo{
+    width: 10rem;
+  }
+}
 
 
